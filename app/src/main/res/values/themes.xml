@@ -6,4 +6,20 @@
     </style>
 
     <style name="Theme.ProjectHive" parent="Base.Theme.ProjectHive" />
+
+    <style name="RegularFontForTextView" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@fonts/overpass_regular</item>
+    </style>
+    <style name="BoldFontForTextView" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@fonts/overpass_bold</item>
+    </style>
+    <style name="ItalicFontForTextView" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@fonts/overpass_italic</item>
+    </style>
+    <style name="LightFontForTextView" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@fonts/overpass_light</item>
+    </style>
+    <style name="MediumFontForTextView" parent="@android:style/Widget.TextView">
+        <item name="android:fontFamily">@fonts/overpass_medium</item>
+    </style>
 </resources>

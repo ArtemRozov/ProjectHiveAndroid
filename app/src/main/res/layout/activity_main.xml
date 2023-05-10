@@ -1,18 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="20dp"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/logo_button"
+            android:layout_width="90pt"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="10pt"
+            android:layout_marginStart="20pt"
+            android:layout_marginTop="10pt"
+            android:text="@string/log_in_text"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="24pt"
+            android:layout_height="24pt"
+            android:layout_marginStart="20pt"
+            android:layout_marginTop="10pt"
+            android:contentDescription="@string/headertriangle"
+            android:elevation="20dp"
+            app:srcCompat="@drawable/triangle"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:layout_marginTop="15pt"
+            android:layout_marginStart="5pt"
+            android:elevation="20dp"
+            android:layout_toEndOf="@id/logo"
+            android:text="@string/projecthive_title"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/accountView"
+            android:layout_width="20pt"
+            android:layout_height="20pt"
+            app:srcCompat="@drawable/user_photo"
+            android:layout_marginTop="7pt"
+            android:layout_marginEnd="25pt"
+            android:elevation="20dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/headertriangle"
+            />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9pt"
+            android:layout_marginTop="30pt"
+            android:layout_marginEnd="21pt"
+            android:elevation="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/log_in_text"
+            tools:ignore="RelativeOverlap" />
+
+        <Button
+            android:id="@+id/auth_button"
+            android:layout_width="40pt"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="10pt"
+            android:layout_marginTop="7pt"
+            android:layout_marginEnd="13pt"
+            android:layout_alignParentEnd="true"
+            android:text="@string/log_in_text"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_part"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/second_color"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt">
+
+        <TextView
+            android:id="@+id/second_part_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:layout_marginTop="10pt"
+            android:layout_marginHorizontal="10pt"
+            android:textAlignment="center"
+            android:elevation="20dp"
+            android:text="@string/second_part_text"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/third_part"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt">
+
+        <ImageView
+            android:id="@+id/second_part_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10pt"
+            android:layout_marginVertical="10pt"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/second_part_text"
+            android:elevation="20dp"
+            app:srcCompat="@drawable/main_page_img_1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/fourth_part"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/second_color"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt">
+
+        <TextView
+            android:id="@+id/fourth_part_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10pt"
+            android:layout_marginTop="10pt"
+            android:layout_marginHorizontal="10pt"
+            android:textAlignment="center"
+            android:elevation="20dp"
+            android:text="@string/fourth_part_text"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60pt"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/black"
+            android:textSize="10pt"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/start_working" />
+    </RelativeLayout>
+
+</LinearLayout>
