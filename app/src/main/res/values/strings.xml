@@ -6,4 +6,22 @@
     <string name="second_part_text">Ефективно керуй проектами, використовуючи ProjectHive</string>
     <string name="fourth_part_text">Спробуй наші зручні інструменти для керування задачами</string>
     <string name="start_working">Почати роботу</string>
+    <string name="back_to_main">На головну</string>
+    <string name="log_in_word">Авторизація</string>
+    <string name="email_text">електронна пошта</string>
+    <string name="example_mail_com">example@mail.com</string>
+    <string name="psw_text">пароль</string>
+    <string name="psw">********</string>
+    <string name="log_in_button_text">Увійти</string>
+    <string name="go_to_registration">Перейти до реєстрації</string>
+    <string name="go_to_sign_in">Перейти до авторизації</string>
+    <string name="register_button_text">Зареєструватися</string>
+    <string name="register_text">Реєстрація</string>
+    <string name="projects_text">Проекти</string>
+    <string name="project_name">project name</string>
+    <string name="search_text">Пошук :</string>
+    <string name="no_projects_message">Тут поки що тихо, навіть занадто...</string>
+    <string name="create_project_text">Свторити проект</string>
+    <string name="calendar_text">Календар</string>
+    <string name="go_to_button_text">Перейти</string>
 </resources>
