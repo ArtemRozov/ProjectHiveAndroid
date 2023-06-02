@@ -21,7 +21,19 @@
     <string name="project_name">project name</string>
     <string name="search_text">Пошук :</string>
     <string name="no_projects_message">Тут поки що тихо, навіть занадто...</string>
-    <string name="create_project_text">Свторити проект</string>
+    <string name="create_project_text">Створити проект</string>
     <string name="calendar_text">Календар</string>
     <string name="go_to_button_text">Перейти</string>
+    <string name="profil_name">Профіль</string>
+    <string name="desc_for_cover">change cover background</string>
+    <string name="extra_info_text">Детальна інформація</string>
+    <string name="nickname">Nickname</string>
+    <string name="email">Email</string>
+    <string name="name">Ім\'я</string>
+    <string name="person_name">Василь</string>
+    <string name="last_name">Прізвище</string>
+    <string name="person_last_name">Васильович</string>
+    <string name="position">Посада</string>
+    <string name="maneger">Менеджер</string>
+    <string name="profile_text">Профіль</string>
 </resources>

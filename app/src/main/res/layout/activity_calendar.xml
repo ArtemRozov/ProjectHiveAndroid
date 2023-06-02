@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OneProjectActivity">
+
+    <RelativeLayout
+        android:id="@+id/month_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/second_color"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/prev_month_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/month_text"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/month_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/next_month_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_left_arrow"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/month_text"
+            android:rotation="180"
+
+            android:layout_marginStart="20dp"
+            android:contentDescription="TODO" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/weekdaysStrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ПН"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ВТ"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="СР"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ЧТ"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ПТ"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="СБ"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="НД"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rectangle_1"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt"/>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/rectangle_1"
+        android:elevation="20dp"
+        android:layout_marginTop="1pt">
+
+        <Button
+            android:id="@+id/profile_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10pt"
+            android:text="@string/profile_text" />
+
+        <Button
+            android:id="@+id/create_project"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            android:textColor="@color/black"
+            android:textSize="8pt"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10pt"
+            android:text="@string/projects_text"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+</LinearLayout>

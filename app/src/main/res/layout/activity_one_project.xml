@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProjectActivity">
+    tools:context=".OneProjectActivity">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -83,62 +83,14 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/second_part"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="@color/white"
-        android:elevation="20dp"
-        android:layout_marginTop="1pt">
-
-        <TextView
-            android:id="@+id/title_word"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="15pt"
-            android:layout_marginTop="5pt"
-            android:layout_marginStart="10pt"
-            android:text="@string/projects_text"
-            android:layout_centerHorizontal="true"
-            tools:ignore="RelativeOverlap" />
-
-        <TextView
-            android:id="@+id/search_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12pt"
-            android:layout_marginTop="7pt"
-            android:layout_marginStart="10pt"
-            android:layout_below="@id/title_word"
-            android:text="@string/search_text"
-            tools:ignore="RelativeOverlap" />
-
-        <EditText
-            android:id="@+id/search_bar"
-            android:layout_width="105pt"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:inputType="text"
-            android:background="@color/grey_bg"
-            android:layout_below="@id/title_word"
-            android:layout_marginTop="5pt"
-            android:layout_marginHorizontal="10pt"
-            android:layout_alignParentEnd="true"
-            android:paddingStart="5pt"
-            android:hint="@string/project_name"
-            tools:ignore="LabelFor,RtlSymmetry"
-            android:importantForAutofill="no" />
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/projects"
+    <ExpandableListView
+        android:id="@+id/expandable_list_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/rectangle_1"
         android:elevation="20dp"
-        android:background="@color/white"
-        android:layout_marginTop="1pt"
-        android:scrollbars="vertical"
-        android:layout_weight="1"/>
+        android:layout_marginTop="1pt"/>
 
     <RelativeLayout
         android:id="@+id/footer"
@@ -150,7 +102,7 @@
 
         <Button
             android:id="@+id/calendar_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
@@ -161,7 +113,7 @@
 
         <Button
             android:id="@+id/create_project"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
@@ -169,9 +121,8 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10pt"
-            android:text="@string/create_project_text"
+            android:text="@string/projects_text"
             tools:ignore="RelativeOverlap" />
-
     </RelativeLayout>
 
 </LinearLayout>

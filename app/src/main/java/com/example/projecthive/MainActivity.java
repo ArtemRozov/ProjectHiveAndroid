@@ -10,12 +10,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.example.projecthive.notification.NotificationReceiver;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        NotificationReceiver.setupAlarm(getApplicationContext());
 
         // go to the log in activity from main button
         Button button = findViewById(R.id.button);
