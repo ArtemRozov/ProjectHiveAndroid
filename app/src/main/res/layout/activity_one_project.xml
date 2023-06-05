@@ -55,7 +55,7 @@
                 android:id="@+id/account_image"
                 android:layout_width="20pt"
                 android:layout_height="20pt"
-                app:srcCompat="@drawable/user_photo"
+                app:srcCompat="@drawable/avatar"
                 android:layout_marginTop="7pt"
                 android:elevation="20dp"
                 android:layout_centerHorizontal="true"
@@ -70,7 +70,7 @@
                 android:layout_marginTop="30pt"
                 android:layout_centerHorizontal="true"
                 android:elevation="20dp"
-                android:text="@string/profil_name"
+                android:text="@string/artem"
                 tools:ignore="RelativeOverlap" />
 
             <Button

@@ -47,8 +47,8 @@ public class NotificationHelper {
         }
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.triangle)
-                .setContentTitle("Привет")
-                .setContentText("Это ежедневное уведомление")
+                .setContentTitle("ProjectHive")
+                .setContentText("Увага! Завтра закінчується дедлайн!")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true);
 

@@ -1,20 +1,13 @@
 package com.example.projecthive;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.CharacterPickerDialog;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
 
-import com.example.projecthive.Adapters.OnProjectClickListener;
-import com.example.projecthive.Adapters.ProjectsAdapter;
 import com.example.projecthive.Objects.Project;
 
 import java.util.ArrayList;
@@ -31,10 +24,9 @@ public class ProjectActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         List<Project> projectList = new ArrayList<>();
-        projectList.add(new Project("Название проекта 1", "Описание проекта 1", "Описание проекта 5", ""));
-        projectList.add(new Project("Название проекта 2", "Описание проекта 2", "Описание проекта 6", ""));
-        projectList.add(new Project("Название проекта 3", "Описание проекта 3", "Описание проекта 7", ""));
-        projectList.add(new Project("Название проекта 4", "Описание проекта 4", "Описание проекта 8", ""));
+        projectList.add(new Project("Project1", "project under the number 1", "the first project", R.drawable.camera));
+        projectList.add(new Project("Project2", "project under the number 2", "the second project", R.drawable.user_photo));
+        projectList.add(new Project("Project3", "project under the number 3", "the third project", R.drawable.triangle));
 
         ProjectsAdapter mAdapter = new ProjectsAdapter(projectList, new OnProjectClickListener(this));
 
@@ -44,6 +36,13 @@ public class ProjectActivity extends AppCompatActivity {
         // go to profile
         Button button = findViewById(R.id.auth_button);
         button.setOnClickListener(view -> {
+            Intent intent = new Intent(ProjectActivity.this, ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        // go to profile by underbutton
+        Button profileButton = findViewById(R.id.profile_btn);
+        profileButton.setOnClickListener(view -> {
             Intent intent = new Intent(ProjectActivity.this, ProfileActivity.class);
             startActivity(intent);
         });

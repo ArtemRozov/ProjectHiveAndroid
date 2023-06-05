@@ -21,9 +21,17 @@ public class ProfileActivity extends AppCompatActivity {
             Intent intent = new Intent(ProfileActivity.this, ProjectActivity.class);
             startActivity(intent);
         });
+
+        // go to the calendar
+        Button calendarButton = findViewById(R.id.calendar_button);
+        calendarButton.setOnClickListener(view -> {
+            Intent intent = new Intent(ProfileActivity.this, ProjectActivity.class);
+            startActivity(intent);
+        });
     }
 
     public void myButtonClickHandler(View view) {
         Toast.makeText(this, "Button Clicked!", Toast.LENGTH_SHORT).show();
     }
+
 }

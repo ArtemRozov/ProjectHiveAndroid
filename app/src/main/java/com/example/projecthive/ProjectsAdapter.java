@@ -1,19 +1,16 @@
-package com.example.projecthive.Adapters;
+package com.example.projecthive;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projecthive.Objects.Project;
-import com.example.projecthive.R;
 
 import java.util.List;
 
@@ -45,7 +42,8 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
         holder.projectTitle.setText(project.getTitle());
         holder.projectInfo1.setText(project.getInfo1());
         holder.projectInfo2.setText(project.getInfo2());
-        holder.projectImage.setImageResource(R.drawable.user_photo); // Установите изображение здесь
+        holder.projectImage.setImageResource(project.getPhotoResId());
+
         holder.goToButton.setOnClickListener(view -> {
             if (mListener != null) {
                 mListener.onItemClick(project);

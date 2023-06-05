@@ -55,7 +55,7 @@
                 android:id="@+id/account_image"
                 android:layout_width="20pt"
                 android:layout_height="20pt"
-                app:srcCompat="@drawable/user_photo"
+                app:srcCompat="@drawable/avatar"
                 android:layout_marginTop="7pt"
                 android:elevation="20dp"
                 android:layout_centerHorizontal="true"
@@ -70,7 +70,7 @@
                 android:layout_marginTop="30pt"
                 android:layout_centerHorizontal="true"
                 android:elevation="20dp"
-                android:text="@string/profil_name"
+                android:text="@string/artem"
                 tools:ignore="RelativeOverlap" />
 
             <Button
@@ -150,7 +150,7 @@
 
         <Button
             android:id="@+id/calendar_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
@@ -160,8 +160,8 @@
             android:text="@string/calendar_text" />
 
         <Button
-            android:id="@+id/create_project"
-            android:layout_width="wrap_content"
+            android:id="@+id/profile_btn"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/button_color"
             android:textColor="@color/black"
@@ -169,7 +169,7 @@
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="10pt"
-            android:text="@string/create_project_text"
+            android:text="@string/profile_text"
             tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>

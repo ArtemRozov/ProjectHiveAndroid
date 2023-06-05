@@ -1,5 +1,6 @@
-package com.example.projecthive.Adapters;
+package com.example.projecthive;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -11,12 +12,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+
 import com.example.projecthive.Objects.Project;
 import com.example.projecthive.Objects.Task;
 import com.example.projecthive.OneProjectActivity;
 import com.example.projecthive.ProfileActivity;
 import com.example.projecthive.R;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -122,12 +126,25 @@ public class TasksAdapter extends BaseExpandableListAdapter {
                         "Заголовок: " + selectedTaskTitle + "\n" +
                         "Дедлайн: " + selectedTaskDeadline;
 
-                System.out.println(message);
-                Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+                showInfoPopup(message, selectedTaskTitle, selectedTaskDeadline);
+                //System.out.println(message);
+                //Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
             }
         });
 
         return convertView;
+    }
+
+    private void showInfoPopup(String message, String title, String deadline) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Інформація про завдання " + title);
+
+        builder.setMessage("Дедлайн до: " + deadline + "\nПотрібно зробити щось.");
+
+        builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     @Override

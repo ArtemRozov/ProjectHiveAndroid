@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -30,8 +32,18 @@ public class LogInActivity extends AppCompatActivity {
         // go to the projects after log in
         button = findViewById(R.id.sign_up);
         button.setOnClickListener(view -> {
-            Intent intent = new Intent(LogInActivity.this, ProjectActivity.class);
-            startActivity(intent);
+            EditText emailEditText = findViewById(R.id.editTextTextEmailAddress);
+            String email = emailEditText.getText().toString();
+            EditText pswEditText = findViewById(R.id.editTextTextPassword);
+            String psw = pswEditText.getText().toString();
+
+            if(email.equals("admin@gmail.com") && psw.equals("12345")){
+                Intent intent = new Intent(LogInActivity.this, ProjectActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(getApplicationContext(), "Wrong email or password", Toast.LENGTH_SHORT).show();
+            }
         });
     }
+
 }

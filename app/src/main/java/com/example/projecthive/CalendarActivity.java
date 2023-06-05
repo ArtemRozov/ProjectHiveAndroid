@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.projecthive.Adapters.CalendarAdapter;
-
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -134,7 +132,14 @@ public class CalendarActivity extends AppCompatActivity implements CalendarAdapt
         int year = calendar.get(Calendar.YEAR);
 
         @SuppressLint("DefaultLocale") String date = String.format("%02d.%02d.%d", day, month + 1, year);
-        builder.setMessage("Обрано день: " + date);
+
+        if (day == 6 && month == 5 && year == 2023) {
+            builder.setMessage("Обрано день: " + date + "\nЗакінчується дедлайн завдання 'Task1' проекту 'Project1'!");
+        } else if (day == 17 && month == 5 && year == 2023) {
+            builder.setMessage("Обрано день: " + date + "\nЗакінчується дедлайн завдання 'First task' проекту 'Project2'!");
+        } else {
+            builder.setMessage("Обрано день: " + date + "\nЗустрічей або дедлайнів на обраний день немає!");
+        }
 
         builder.setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
 

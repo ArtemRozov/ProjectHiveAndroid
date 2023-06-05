@@ -9,7 +9,7 @@
     <string name="back_to_main">На головну</string>
     <string name="log_in_word">Авторизація</string>
     <string name="email_text">електронна пошта</string>
-    <string name="example_mail_com">example@mail.com</string>
+    <string name="example_mail_com">admin@gmail.com</string>
     <string name="psw_text">пароль</string>
     <string name="psw">********</string>
     <string name="log_in_button_text">Увійти</string>
@@ -30,10 +30,11 @@
     <string name="nickname">Nickname</string>
     <string name="email">Email</string>
     <string name="name">Ім\'я</string>
-    <string name="person_name">Василь</string>
+    <string name="person_name">Artem</string>
     <string name="last_name">Прізвище</string>
     <string name="person_last_name">Васильович</string>
     <string name="position">Посада</string>
-    <string name="maneger">Менеджер</string>
+    <string name="maneger">Користувач</string>
     <string name="profile_text">Профіль</string>
+    <string name="artem">Artem</string>
 </resources>

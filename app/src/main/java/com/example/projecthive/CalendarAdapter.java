@@ -1,4 +1,4 @@
-package com.example.projecthive.Adapters;
+package com.example.projecthive;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,8 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.projecthive.R;
 
 import java.util.Calendar;
 import java.util.List;
@@ -59,13 +57,10 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.Calend
             int year = calendar.get(Calendar.YEAR);
 
             if (day == currentDay && month == currentMonth && year == currentYear) {
-                // Установка фона текущего дня в красный цвет
                 holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.red_color));
-            } else if (day == 17) {
-                // Установка фона дня 17 в зеленый цвет
+            } else if ((day == 17 || day == 6) && month == 5 && year == 2023) {
                 holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.green_color));
             } else {
-                // В противном случае, используйте обычный фон
                 holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.second_color));
             }
         } else {

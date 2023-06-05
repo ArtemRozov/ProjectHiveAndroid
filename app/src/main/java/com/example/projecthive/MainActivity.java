@@ -3,12 +3,8 @@ package com.example.projecthive;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Point;
 import android.os.Bundle;
-import android.view.Display;
-import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.example.projecthive.notification.NotificationReceiver;
 
@@ -19,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // setup notification service
         NotificationReceiver.setupAlarm(getApplicationContext());
 
         // go to the log in activity from main button
@@ -35,4 +32,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
 }
